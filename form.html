@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua Conta</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1c1d;
+            color: #ffffff;
+        }
+        .registration-container {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: #495057;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container registration-container">
+    <form id="registration-form">
+        <h2 class="text-center mb-4">Crie sua Conta</h2>
+        <div class="form-group">
+            <label for="fullname">Nome Completo:</label>
+            <input type="text" class="form-control" id="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" class="form-control" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirme a Senha:</label>
+            <input type="password" class="form-control" id="confirm-password" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Sexo:</label>
+            <select class="form-control" id="gender" required>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" class="form-control" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-01" required>
+            <small id="cpfHelp" class="form-text text-muted">Formato: 123.456.789-01</small>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone:</label>
+            <input type="tel" class="form-control" id="phone" pattern="\d{2}\ \d{5}-\d{4}" placeholder="12 98765-4321" required>
+            <small id="phoneHelp" class="form-text text-muted">Formato: 12 98765-4321</small>
+        </div>
+        <div class="form-group">
+            <label for="birthdate">Data de Nascimento:</label>
+            <input type="date" class="form-control" id="birthdate" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Endereço:</label>
+            <input type="text" class="form-control" id="address" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="city">Cidade:</label>
+                <input type="text" class="form-control" id="city" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="state">Estado:</label>
+                <input type="text" class="form-control" id="state" required>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="zipcode">CEP:</label>
+                <input type="text" class="form-control" id="zipcode" pattern="\d{5}-\d{3}" placeholder="12345-678" required>
+                <small id="zipcodeHelp" class="form-text text-muted">Formato: 12345-678</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="neighborhood">Bairro:</label>
+            <input type="text" class="form-control" id="neighborhood" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Criar Conta</button>
+    </form>
+</div>
+
+<!-- Adicione os scripts do Bootstrap e do jQuery (necessário para o Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Adicionado um evento "submit" ao formulário para redirecionar imediatamente após a submissão -->
+<script>
+    document.getElementById("registration-form").addEventListener("submit", function(event) {
+        // Impedir que o formulário seja enviado normalmente
+        event.preventDefault();
+        
+        window.location.href = "teste.html  ";
+    });
+</script>
+
+</body>
+</html>

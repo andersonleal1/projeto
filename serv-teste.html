@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Tecnologia</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .navbar-brand,
+        .navbar-text {
+            color: #ffffff;
+        }
+        .navbar-logo {
+            max-height: 80px;
+        }
+        .services-container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .service-card {
+            background-color: #000000;
+            color: #ffffff;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out; /* Adiciona uma transição de escala (scale) */
+        }
+        .service-card:hover {
+            transform: scale(1.05); /* Aumenta a escala ao passar o mouse */
+        }
+
+        .service-card a {
+            text-decoration: none; /* Remove o sublinhado padrão dos links */
+            color: #ffffff; /* Define a cor do texto do link */
+        }
+        .service-card a:hover {
+            text-decoration:wavy; /* Adiciona um sublinhado ao passar o mouse sobre o link */
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/img/1.png" alt="Logo" class="navbar-logo" >
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="teste.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="log-teste.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container services-container">
+    <div class="card-deck">
+        <div class="card service-card">
+            <img src="/img/plano-de-fundo-de-programacao-com-pessoa-trabalhando-com-codigos-no-computador.jpg" class="card-img-top" alt="Serviço 1">
+            <div class="card-body">
+                <h5 class="card-title">Desenvolvimento Web</h5>
+                <p class="card-text">Oferecemos serviços de desenvolvimento web de alta qualidade, utilizando as mais recentes tecnologias.</p>
+            </div>
+        </div>
+        <div class="card service-card">
+            <img src="/img/conceito-de-colagem-de-controle-de-qualidade-padrao.jpg" class="card-img-top" alt="Serviço 2" >
+            <div class="card-body">
+                <h5 class="card-title">Consultoria em TI</h5>
+                <p class="card-text">Nossa equipe de especialistas em TI fornece consultoria para ajudar sua empresa a alcançar seus objetivos tecnológicos.</p> 
+            </div>
+        </div>
+        <div class="card service-card">
+            <img src="/img/conceito-de-colagem-de-controle-de-qualidade-padrao.jpg" class="card-img-top" alt="Serviço 3">
+            <a href="teste.html">
+            <div class="card-body">
+                <h5 class="card-title">Segurança Cibernética</h5>
+                <p class="card-text">Protegemos sua empresa contra ameaças cibernéticas, garantindo a segurança dos seus dados e sistemas.</p>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Adicione os scripts do Bootstrap e do jQuery (necessário para o Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

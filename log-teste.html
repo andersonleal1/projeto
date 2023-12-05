@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1c1d;
+            color: #ffffff;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: #495057;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .navbar-brand,
+        .navbar-text {
+            color: #ffffff;
+        }
+        .navbar-logo {
+            max-height: 70px; 
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="teste.html">
+            <img src="/img/1.png" alt="Logo" class="navbar-logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="teste.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre-nos.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container login-container">
+    <form id="login-form">
+        <h2 class="text-center mb-4">Login</h2>
+        <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" class="form-control" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" class="form-control" id="password" required>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" onclick="login()">Entrar</button>
+        <p class="mt-3"><a href="#" onclick="forgotPassword()">Esqueceu sua senha?</a></p>
+        
+        <button type="button" class="btn btn-success btn-block" onclick="createAccount()">Crie uma conta</button>
+    </form>
+</div>
+
+<!-- Adicione os scripts do Bootstrap e do jQuery (necessário para o Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // Adicionar a lógica de autenticação aqui
+        // Exemplo simples: apenas exibir uma mensagem no console
+        console.log("Usuário: " + username + " Senha: " + password);
+    }
+
+    function forgotPassword() {
+        var username = prompt("Digite seu nome de usuário para redefinir a senha:");
+        
+        // Adicionar a lógica para enviar um e-mail de redefinição de senha ou outra ação necessária
+        // Exemplo simples: apenas exibir uma mensagem no console
+        console.log("Um e-mail de redefinição de senha foi enviado para: " + username);
+    }
+
+    function createAccount() {
+        // Adicione a lógica para criar uma conta aqui
+        // Exemplo simples: apenas exibir uma mensagem no console
+        window.location.href="furiba.html"
+        console.log("Botão 'Crie uma conta' clicado");
+        <!-- ... (código anterior) ... -->
+
+
+    // Função para criar uma conta e redirecionar para outra página
+    function createAccount() {
+        // Obter os valores do formulário
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Verificar se o usuário e a senha são válidos (apenas para fins de exemplo)
+        if (validateUserAndPass(username, password)) {
+            // Criar um objeto de usuário (substitua isso com um backend real)
+            var newUser = {
+                username: username,
+                password: password
+            };
+
+            // Adicionar o novo usuário ao armazenamento local (pode ser substituído por um backend real)
+            saveUser(newUser);
+
+            // Exibir mensagem de sucesso (substitua isso por um redirecionamento ou outra ação necessária)
+            alert("Conta criada com sucesso!");
+
+            // Limpar os campos do formulário
+            clearForm();
+
+            // Redirecionar para outra página (substitua "outrapagina.html" pelo seu URL desejado)
+            window.location.href = "";
+        } else {
+            // Exibir mensagem de erro (substitua isso com a lógica de validação real)
+            alert("Usuário ou senha inválidos. Por favor, tente novamente.");
+        }
+    }
+
+    // ... (funções anteriores) ...
+
+
+
+}
+</script>
+
+</body>
+</html>
